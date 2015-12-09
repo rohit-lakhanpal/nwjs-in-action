@@ -14,8 +14,19 @@ var getUsersHomeFolder = function () {
 	return osenv.home();
 } 
 
-// Alert OS
-alert(detectOs());
+// This function updates the current folder html element to the passed in path
+var updateCurrentFolder = function (folderPath) {
+	document.getElementById('current-folder').innerText = folderPath;
+} 
 
-// Alert home folder
-alert(getUsersHomeFolder());
+// Display the user's home folder on the screen
+window.onload = function () {
+	updateCurrentFolder(getUsersHomeFolder());
+}; 
+
+// Code from previous tasks
+// // Alert OS
+// alert(detectOs());
+
+// // Alert home folder
+// alert(getUsersHomeFolder());
