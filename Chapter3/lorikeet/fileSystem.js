@@ -8,11 +8,11 @@ var path = require('path');
 
 
 // Define custom functions
-function getUsersHomeFolder () {
+var getUsersHomeFolder =function () {
 	return osenv.home();
 }
 
-function inspectAndDescribeFile (filePath, cb) {
+var inspectAndDescribeFile = function  (filePath, cb) {
 	var result = {file: path.basename(filePath), path: filePath, type: ''};
 	fs.stat(filePath, function (err, stat) {
 		if (err) { cb(err); }
@@ -22,7 +22,7 @@ function inspectAndDescribeFile (filePath, cb) {
 	});
 }
 
-function getFilesInFolder (folderPath, cb) {
+var getFilesInFolder = function  (folderPath, cb) {
 	fs.readdir(folderPath, function (err, files) {
 		if (err) { cb(err); }
 		async.map(files, function (file, internalCb) {
