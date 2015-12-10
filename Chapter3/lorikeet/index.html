@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Lorikeet</title>
+    <script type="text/javascript" src=".\app.js"> </script>
+    <script type="text/javascript" src="bower_components/zepto/zepto.min.js"></script>
+    <link rel="stylesheet" href=".\app.css" /> 
+</head>
+<body>
+    <div id="toolbar">
+        <div id="current-folder"></div>
+    </div>
+    <div id="main-area"></div> 
+
+
+    <!-- This snippet of HTML is the template that we 
+    will use to render a file in the main area -->
+    <template id="item-template">
+        <div class="item">
+            <img class="icon" />
+            <div class="filename"></div>
+        </div>
+    </template>     
+</body>
+</html>
